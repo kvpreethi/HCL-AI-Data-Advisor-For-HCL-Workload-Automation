@@ -11,7 +11,7 @@
   -  [Accessing the container images](#accessing-the-container-images)
   -  [AIDA structure](#aida-structure)
   -  [AIDA Installation](#aida-installation) 
-  -  [Managing OpenMetrics server credentials](#managing-openmetrics-server-credentials)
+  -  [Managing Workload Automation server credentials](#managing-workload-automation-server-credentials)
   -  [Updating AIDA installation](#updating-aida-installation)
   -  [Uninstalling AIDA](#uninstalling-aida)
   -  [AIDA.sh script](#aida.sh-script)
@@ -23,13 +23,12 @@
 
 For more information about AIDA, see [AIDA User's Guide](https://help.hcltechsw.com/workloadautomation/v101/common/src_ai/awsaimst_welcome.html).
 
-For information about HCL Workload Automation exposed metrics, see [Monitoring with Prometheus](https://help.hcltechsw.com/workloadautomation/v101/distr/src_ref/awsrgmonprom.html).  
-
-For information about HCL Workload Automation for Z exposed metrics, see [Exposing metrics to monitor your workload](https://help.hcltechsw.com/workloadautomation/v101/zos/src_man/eqqr1metricsmonitoring.html).    
 
 ## Prerequisites
 
- -  HCL Workload Automation V101 exposed metrics.
+ -  HCL Workload Automation V10.1 exposed metrics.
+    - For information about HCL Workload Automation exposed metrics, see [Exposing metrics to monitor your workload](https://help.hcltechsw.com/workloadautomation/v101/distr/src_ref/awsrgmonprom.html).  
+    - For information about HCL Workload Automation for Z exposed metrics, see [Exposing metrics to monitor your workload](https://help.hcltechsw.com/workloadautomation/v101/zos/src_man/eqqr1metricsmonitoring.html).  
 
  -  Docker Compose 1.28 or later.
 
@@ -42,7 +41,7 @@ For information about HCL Workload Automation for Z exposed metrics, see [Exposi
     - Mozilla Firefox 61.0.1 or higher 
     - Microsoft Edge 79 or higher
 
- -  External container image for Elasticsearch (Open Distro for Elasticsearch V1.3.3).
+ -  External container image for Elasticsearch (OpenSearch 2.3.0).
 
  -  External container image for Keycloak (JBoss Keycloak V17.0.0). Optional, if you want to access AIDA UI from outside the Dynamic Workload Console.
  
@@ -136,12 +135,12 @@ Also, AIDA uses:
 ## AIDA installation 
 To install AIDA, run the following procedure: 
 
- 1. Accept the product license by setting the LICENSE parameter to "**accept**" in the common.env file located in the [docker_deployment_dir] directory.
+ 1. Accept the product license by setting the LICENSE parameter to **accept** in the common.env file located in the [docker_deployment_dir] directory.
  2. To use custom SSL certificates for AIDA, in the <install_path>/nginx/cert folder replace aida.crt e aida.key with your own files (do not change the default names).
  3. Verify that the `DWC_PUBLIC_KEY` parameter in the common.env file is set to the DWC public key of the Liberty SSL certificates.
 
 	If you are using custom certificates for the DWC, replace the `DWC_PUBLIC_KEY` value accordingly.
- 4. In the common.env file, set the ``OPENSSL_PASSWORD``  parameter. This parameter will be used to generate an encryption key to hide the HCL Workload Automation engine credentials.
+ 4. In the common.env file, set the ``OPENSSL_PASSWORD``  parameter. This parameter will be used to generate an encryption key to hide the HCL Workload Automation engine credentials. (According to ISO, passwords must be encrypted inside the database) .
  5. If you want to customize the installation parameters, edit the common.env file. For details, see  [Configuration variables](#configuration-variables).
  6. Optionally, from [docker_deployment_dir], run the command
  
@@ -159,7 +158,7 @@ To install AIDA, run the following procedure:
      ``./AIDA.sh add-credentials``    
 	
      This command starts a guided configuration of the server. 
-	 For details, see [Managing OpenMetrics server credentials](#managing-openmetrics-server-credentials).
+	 For details, see [Managing Workload Automation server credentials](#managing-workload-automation-server-credentials).
     
 9. If Keycloak is included in your AIDA deployment, you can connect AIDA user interface at the following link
  
@@ -170,8 +169,8 @@ To install AIDA, run the following procedure:
 
    **Note**: The **common.env** environment file contains all the environment variables. For details, see  [Configuration variables](#configuration-variables).   
 
-## Managing OpenMetrics server credentials
-You can manage the credentials needed to connect to an Openmetrics server (such as HCL Workload Automation engine) using  AIDA.sh script. 
+## Managing Workload Automation server credentials
+You can manage the credentials needed to connect to a WorkloadAutomation server using  AIDA.sh script. 
 With a single AIDA instance you can monitor hybrid environments with a mix of HCL Workload Automation for distributed and z/OS systems.
 
 **Limitations:**
@@ -185,8 +184,8 @@ To **add new credentials**, run the following steps:
 	 A guided configuration procedure will start. 
  2. Follow the guided procedure and answer the prompts to add your credentials, specify the engine type (if HCL Workload Automation for distributed systems or HCL Workload Automation for Z) and, for HCL Workload Automation for Z only, also the engine name.
 
-**Note:** If you are connecting HCL Workload Automation for distributed systems as an OpenMetric server, you must use the Engine credentials.
-If you are connecting HCL Workload Automation for Z as an OpenMetric server, you must use the Dynamic Workload Console credentials instead.
+**Note:** If you are connecting HCL Workload Automation for distributed systems, you must use the Engine credentials.
+If you are connecting HCL Workload Automation for Z, you must use the Dynamic Workload Console credentials instead.
 
 To **update existing credentials**, run the following steps:
  1. From [docker_deployment_dir], run the following command   
@@ -265,7 +264,7 @@ For the command usage, run
 
 ``down-volumes``  Removes  AIDA's containers and volumes
 
-``add-credentials`` Lets  you  add  credentials to connect to an OpenMetric server (such as HCL Workload Automation engine)
+``add-credentials`` Lets  you  add  credentials to connect to a Workload Automation server
 
 ``update-credentials`` Lets  you update previously  added  credentials
 
@@ -273,16 +272,15 @@ For the command usage, run
 
 ``set-custom-port`` Sets a custom port to access AIDA (default value is 9432)
 
-``set-shards`` Sets the number of shards for Elasticsearch (default value is 1)
 
  
 ## Configuration variables
 This section lists the configuration variables in the common.env file.
 
 ### Common
-``LICENSE=notaccepted`` - before starting AIDA deployment, chance into "accept" to accept the product license.
+``LICENSE=notaccepted`` - before starting AIDA deployment, change into **accept** to accept the product license.
 
-``LOG_LEVEL=INFO`` - logging level
+``LOG_LEVEL=INFO`` - logging level. Possible values are: DEBUG, INFO, ERROR, WARNING, CRITICAL.
 
 ``ESCONFIG=["https://admin:admin@aida-es:9200"]`` - comma separated list of elasticsearch hosts
 
@@ -292,9 +290,7 @@ This section lists the configuration variables in the common.env file.
 
 ``REDIS_PSWD=foobared`` - aida-redis password
 
-``DEFAULT_SHARD_COUNT=1`` - number of shards for elasticsearch
-
-``OPENSSL_PASSWORD=`` - mandatory - this password will be used to generate an encryption key to hide the OpenMetrics server (such as HCL Workload Automation engine) credentials.
+``OPENSSL_PASSWORD=`` - mandatory - this password will be used to generate an encryption key to hide the Workload Automation server credentials. (According to ISO, passwords must be encrypted inside the database).
  
 ### aida-ad
 ``AIDA_UI_URL: "https://aida-ip:9432/"`` - aida UI url 
