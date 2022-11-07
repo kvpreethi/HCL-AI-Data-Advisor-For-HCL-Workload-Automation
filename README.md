@@ -296,7 +296,7 @@ This section lists the configuration variables in the common.env file.
 
 ``DEFAULT_REPLICA_COUNT=0`` - Number of opensearch replicas
 
-``WEB_CONCURRENCY=6`` - Number of workers of the web server. The more they are, the more there is parallelism (and the more RAM is consumed). Suggested value: 2 x + 1
+``WEB_CONCURRENCY=6`` - Number of workers of the web server. The more they are, the more there is parallelism (and the more RAM is consumed). Suggested value: 2 x <number_of_cores> + 1
 
 ``OPENSSL_PASSWORD=`` - mandatory - this password will be used to generate an encryption key to hide the OpenMetrics server (such as HCL Workload Automation engine) credentials.
  
