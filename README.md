@@ -160,7 +160,7 @@ To install AIDA, run the following procedure:
      ``./AIDA.sh add-credentials``    
 	
      This command starts a guided configuration of the server. 
-	 For details, see [Managing OpenMetrics server credentials](#managing-openmetrics-server-credentials).
+	 For details, see [Managing Workload Automation server credentials](#managing-workload-automation-server-credentials).
     
 9. If Keycloak is included in your AIDA deployment, you can connect AIDA user interface at the following link
  
@@ -299,7 +299,7 @@ This section lists the configuration variables in the common.env file.
 
 ``WEB_CONCURRENCY=6`` - Number of workers of the web server. The more they are, the more there is parallelism (and the more RAM is consumed). Suggested value: 2 x <number_of_cores> + 1
 
-``OPENSSL_PASSWORD=`` - mandatory - this password will be used to generate an encryption key to hide the OpenMetrics server (such as HCL Workload Automation engine) credentials.
+``OPENSSL_PASSWORD=`` - mandatory - this password will be used to generate an encryption key to hide the Workload Automation server credentials. (According to ISO, passwords must be encrypted inside the database).
  
 ### aida-ad
 ``AIDA_UI_URL: "https://aida-ip:9432/"`` - aida UI url 
