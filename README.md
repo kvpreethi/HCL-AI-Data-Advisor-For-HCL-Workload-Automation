@@ -11,7 +11,7 @@
   -  [Accessing the container images](#accessing-the-container-images)
   -  [AIDA structure](#aida-structure)
   -  [AIDA Installation](#aida-installation) 
-  -  [Managing OpenMetrics server credentials](#managing-openmetrics-server-credentials)
+  -  [Managing Workload Automation server credentials](#managing-workload-automation-server-credentials)
   -  [Updating AIDA installation](#updating-aida-installation)
   -  [Uninstalling AIDA](#uninstalling-aida)
   -  [AIDA.sh script](#aida.sh-script)
@@ -23,13 +23,14 @@
 
 For more information about AIDA, see [AIDA User's Guide](https://help.hcltechsw.com/workloadautomation/v101/common/src_ai/awsaimst_welcome.html).
 
-For information about HCL Workload Automation exposed metrics, see [Monitoring with Prometheus](https://help.hcltechsw.com/workloadautomation/v101/distr/src_ref/awsrgmonprom.html).  
-
-For information about HCL Workload Automation for Z exposed metrics, see [Exposing metrics to monitor your workload](https://help.hcltechsw.com/workloadautomation/v101/zos/src_man/eqqr1metricsmonitoring.html).    
+   
 
 ## Prerequisites
 
  -  HCL Workload Automation V101 exposed metrics.
+     - For information about HCL Workload Automation exposed metrics, see [Exposing metrics to monitor your workload](https://help.hcltechsw.com/workloadautomation/v101/distr/src_ref/awsrgmonprom.html).  
+
+     - For information about HCL Workload Automation for Z exposed metrics, see [Exposing metrics to monitor your workload](https://help.hcltechsw.com/workloadautomation/v101/zos/src_man/eqqr1metricsmonitoring.html). 
 
  -  Docker Compose 1.28 or later.
 
@@ -170,8 +171,8 @@ To install AIDA, run the following procedure:
 
    **Note**: The **common.env** environment file contains all the environment variables. For details, see  [Configuration variables](#configuration-variables).   
 
-## Managing OpenMetrics server credentials
-You can manage the credentials needed to connect to an Openmetrics server (such as HCL Workload Automation engine) using  AIDA.sh script. 
+## Managing Workload Automation server credentials
+You can manage the credentials needed to connect to a Workload Automation server using  AIDA.sh script. 
 With a single AIDA instance you can monitor hybrid environments with a mix of HCL Workload Automation for distributed and z/OS systems.
 
 **Limitations:**
@@ -185,8 +186,8 @@ To **add new credentials**, run the following steps:
 	 A guided configuration procedure will start. 
  2. Follow the guided procedure and answer the prompts to add your credentials, specify the engine type (if HCL Workload Automation for distributed systems or HCL Workload Automation for Z) and, for HCL Workload Automation for Z only, also the engine name.
 
-**Note:** If you are connecting HCL Workload Automation for distributed systems as an OpenMetric server, you must use the Engine credentials.
-If you are connecting HCL Workload Automation for Z as an OpenMetric server, you must use the Dynamic Workload Console credentials instead.
+**Note:** If you are connecting HCL Workload Automation for distributed systems, you must use the Engine credentials.
+If you are connecting HCL Workload Automation for Z, you must use the Dynamic Workload Console credentials instead.
 
 To **update existing credentials**, run the following steps:
  1. From [docker_deployment_dir], run the following command   
@@ -194,7 +195,7 @@ To **update existing credentials**, run the following steps:
 	 ``./AIDA.sh update-credentials``. 
 	
 	 A guided configuration procedure will start.
- 2. Follow the guided procedure and answer the prompts to add your credentials,   specify the engine type (if HCL Workload Automation for distributed systems or HCL Workload Automation for Z) and, for HCL Workload Automation for Z only, also the engine name.
+ 2. Follow the guided procedure and answer the prompts to add your credentials, specify the engine type (if HCL Workload Automation for distributed systems or HCL Workload Automation for Z) and, for HCL Workload Automation for Z only, also the engine name.
 
 
 To **delete existing credentials**, run the following steps:
