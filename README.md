@@ -27,7 +27,7 @@ For more information about AIDA, see [AIDA User's Guide](https://help.hcltechsw.
 
 ## Prerequisites
 
- -  HCL Workload Automation V101 exposed metrics.
+ -  HCL Workload Automation V10.1 exposed metrics.
      - For information about HCL Workload Automation exposed metrics, see [Exposing metrics to monitor your workload](https://help.hcltechsw.com/workloadautomation/v101/distr/src_ref/awsrgmonprom.html).  
 
      - For information about HCL Workload Automation for Z exposed metrics, see [Exposing metrics to monitor your workload](https://help.hcltechsw.com/workloadautomation/v101/zos/src_man/eqqr1metricsmonitoring.html). 
@@ -137,7 +137,7 @@ Also, AIDA uses:
 ## AIDA installation 
 To install AIDA, run the following procedure: 
 
- 1. Accept the product license by setting the LICENSE parameter to "**accept**" in the common.env file located in the [docker_deployment_dir] directory.
+ 1. Accept the product license by setting the LICENSE parameter to **accept** in the common.env file located in the [docker_deployment_dir] directory.
  2. To use custom SSL certificates for AIDA, in the <install_path>/nginx/cert folder replace aida.crt e aida.key with your own files (do not change the default names).
  3. Verify that the `DWC_PUBLIC_KEY` parameter in the common.env file is set to the DWC public key of the Liberty SSL certificates.
 
@@ -274,7 +274,6 @@ For the command usage, run
 
 ``set-custom-port`` Sets a custom port to access AIDA (default value is 9432)
 
-``set-shards`` Sets the number of shards for Elasticsearch (default value is 1)
 
  
 ## Configuration variables
@@ -283,7 +282,7 @@ This section lists the configuration variables in the common.env file.
 ### Common
 ``LICENSE=notaccepted`` - before starting AIDA deployment, chance into "accept" to accept the product license.
 
-``LOG_LEVEL=INFO`` - logging level
+``LOG_LEVEL=INFO`` - logging level. Possible values are: DEBUG, INFO, ERROR, WARNING, CRITICAL
 
 ``ESCONFIG=["https://admin:admin@aida-es:9200"]`` - comma separated list of elasticsearch hosts
 
