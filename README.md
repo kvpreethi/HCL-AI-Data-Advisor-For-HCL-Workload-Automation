@@ -266,7 +266,7 @@ For the command usage, run
 
 ``down-volumes``  Removes  AIDA's containers and volumes
 
-``add-credentials`` Lets  you  add  credentials to connect to HCL Workload Automation engines
+``add-credentials`` Lets  you  add  credentials to connect to a HCL Workload Automation engine
 
 ``update-credentials`` Lets  you update previously  added  credentials
 
