@@ -80,14 +80,14 @@ Linux intel based 64-bit, and Linux on Z.
     ```
 The images are as follows:
  
- - ``hclcr.io/wa/aida-ad:10.1.0.00`` 
- - ``hclcr.io/wa/aida-exporter:10.1.0.00``
- - ``hclcr.io/wa/aida-email:10.1.0.00``
- - ``hclcr.io/wa/aida-nginx:10.1.0.00``
- - ``hclcr.io/wa/aida-orchestrator:10.1.0.00``
- - ``hclcr.io/wa/aida-predictor:10.1.0.00``
- - ``hclcr.io/wa/aida-redis:10.1.0.00``
- - ``hclcr.io/wa/aida-ui:10.1.0.00``
+ - ``hclcr.io/wa/aida-ad:10.1.0.1`` 
+ - ``hclcr.io/wa/aida-exporter:10.1.0.1``
+ - ``hclcr.io/wa/aida-email:10.1.0.1``
+ - ``hclcr.io/wa/aida-nginx:10.1.0.1``
+ - ``hclcr.io/wa/aida-orchestrator:10.1.0.1``
+ - ``hclcr.io/wa/aida-predictor:10.1.0.1``
+ - ``hclcr.io/wa/aida-redis:10.1.0.1``
+ - ``hclcr.io/wa/aida-ui:10.1.0.1``
  
 
  
