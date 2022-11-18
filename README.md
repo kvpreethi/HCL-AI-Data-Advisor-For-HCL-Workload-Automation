@@ -280,7 +280,7 @@ For the command usage, run
 This section lists the configuration variables in the common.env file.
 
 ### Common
-``LICENSE=notaccepted`` - before starting AIDA deployment, chance into "accept" to accept the product license.
+``LICENSE=notaccepted`` - before starting AIDA deployment, change into **accept** to accept the product license.
 
 ``LOG_LEVEL=INFO`` - logging level. Possible values are: DEBUG, INFO, ERROR, WARNING, CRITICAL
 
