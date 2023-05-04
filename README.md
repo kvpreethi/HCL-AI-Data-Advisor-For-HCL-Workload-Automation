@@ -93,7 +93,7 @@ The images are as follows:
 
  
   
-### From HCL Flexera (offline installation)
+#### From HCL Flexera (offline installation)
 
 Only if you are accessing the images from HCL Flexera source repository (offline installation), run the following steps:
 1. Untar the package locally.
