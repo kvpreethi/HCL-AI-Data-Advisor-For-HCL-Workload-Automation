@@ -27,7 +27,7 @@ For more information about AIDA, see [AIDA User's Guide](https://help.hcltechsw.
 
 ## Prerequisites
 
- -  HCL Workload Automation V10.1 exposed metrics.
+ -  HCL Workload Automation V10.1 or above exposed metrics.
      - For information about HCL Workload Automation exposed metrics, see [Exposing metrics to monitor your workload](https://help.hcltechsw.com/workloadautomation/v101/distr/src_ref/awsrgmonprom.html).  
 
      - For information about HCL Workload Automation for Z exposed metrics, see [Exposing metrics to monitor your workload](https://help.hcltechsw.com/workloadautomation/v101/zos/src_man/eqqr1metricsmonitoring.html). 
@@ -68,7 +68,7 @@ Linux intel based 64-bit, and Linux on Z.
 
 
 ## Accessing the container images
- You can access AIDA docker file and container images from the Entitled Registry:
+ You can access AIDA docker file and container images from the Entitled Registry (online installation):
 
  -  Contact your HCL sales representative for the login details required to access the Entitled Registry.
     
@@ -80,21 +80,22 @@ Linux intel based 64-bit, and Linux on Z.
     ```
 The images are as follows:
  
- - ``hclcr.io/wa/aida-ad:10.1.0.2`` 
- - ``hclcr.io/wa/aida-exporter:10.1.0.2``
- - ``hclcr.io/wa/aida-email:10.1.0.2``
- - ``hclcr.io/wa/aida-nginx:10.1.0.2``
- - ``hclcr.io/wa/aida-orchestrator:10.1.0.2``
- - ``hclcr.io/wa/aida-predictor:10.1.0.2``
- - ``hclcr.io/wa/aida-redis:10.1.0.2``
- - ``hclcr.io/wa/aida-ui:10.1.0.2``
+ - ``hclcr.io/wa/aida-ad:10.1.0.3`` 
+ - ``hclcr.io/wa/aida-exporter:10.1.0.3``
+ - ``hclcr.io/wa/aida-email:10.1.0.3``
+ - ``hclcr.io/wa/aida-nginx:10.1.0.3``
+ - ``hclcr.io/wa/aida-orchestrator:10.1.0.3``
+ - ``hclcr.io/wa/aida-predictor:10.1.0.3``
+ - ``hclcr.io/wa/aida-redis:10.1.0.3``
+ - ``hclcr.io/wa/aida-config:10.1.0.3``
+ - ``hclcr.io/wa/aida-ui:10.1.0.3``
  
 
  
   
-### From HCL Flexera
+### From HCL Flexera (offline installation)
 
-If you are accessing the images from HCL Flexera source repository, run the following steps:
+Only if you are accessing the images from HCL Flexera source repository (offline installation), run the following steps:
 1. Untar the package locally.
 2. From the [docker_deployment_dir] load all the docker images into your environment by running the following commands:
 
@@ -124,6 +125,7 @@ AIDA package includes the following containers:
 - **aida-orchestrator** - Orchestrator service
 - **aida-predictor** - Predictor service
 - **aida-redis** - Internal event manager
+- **aida-config** - AIDA configuration
 - **aida-ui** - AIDA UI
   
 
