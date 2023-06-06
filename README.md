@@ -120,7 +120,7 @@ AIDA package includes the following containers:
 
 - **aida-ad** - Anomaly detection and alert generation service
 - **aida-exporter** - Exporter service
-- **aida-mail** - Email notification service 
+- **aida-email** - Email notification service 
 - **aida-nginx** - As a reverse proxy for AIDA components
 - **aida-orchestrator** - Orchestrator service
 - **aida-predictor** - Predictor service
