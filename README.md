@@ -39,7 +39,7 @@ For more information about AIDA, see [AIDA User's Guide](https://help.hcltechsw.
     Verify that Docker and Docker Compose are installed, configured, and ready to use.
 	
  -  Supported browsers are: 
-	- Google Chrome 67.0.3396.99 or higher
+    - Google Chrome 67.0.3396.99 or higher
     - Mozilla Firefox 61.0.1 or higher 
     - Microsoft Edge 79 or higher
 
@@ -80,15 +80,15 @@ Linux intel based 64-bit, and Linux on Z.
     ```
 The images are as follows:
  
- - ``hclcr.io/wa/aida-ad:10.1.0.3`` 
- - ``hclcr.io/wa/aida-exporter:10.1.0.3``
- - ``hclcr.io/wa/aida-email:10.1.0.3``
- - ``hclcr.io/wa/aida-nginx:10.1.0.3``
- - ``hclcr.io/wa/aida-orchestrator:10.1.0.3``
- - ``hclcr.io/wa/aida-predictor:10.1.0.3``
- - ``hclcr.io/wa/aida-redis:10.1.0.3``
- - ``hclcr.io/wa/aida-config:10.1.0.3``
- - ``hclcr.io/wa/aida-ui:10.1.0.3``
+ - ``hclcr.io/wa/aida-ad:10.2.0.0`` 
+ - ``hclcr.io/wa/aida-exporter:10.2.0.0``
+ - ``hclcr.io/wa/aida-email:10.2.0.0``
+ - ``hclcr.io/wa/aida-nginx:10.2.0.0``
+ - ``hclcr.io/wa/aida-orchestrator:10.2.0.0``
+ - ``hclcr.io/wa/aida-predictor:10.2.0.0``
+ - ``hclcr.io/wa/aida-redis:10.2.0.0``
+ - ``hclcr.io/wa/aida-config:10.2.0.0``
+ - ``hclcr.io/wa/aida-ui:10.2.0.0``
  
 
  
