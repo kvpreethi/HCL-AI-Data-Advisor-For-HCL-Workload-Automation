@@ -80,15 +80,15 @@ Linux intel based 64-bit, and Linux on Z.
     ```
 The images are as follows:
  
- - ``hclcr.io/wa/aida-ad:10.2.3`` 
- - ``hclcr.io/wa/aida-exporter:10.2.3``
- - ``hclcr.io/wa/aida-email:10.2.3``
- - ``hclcr.io/wa/aida-nginx:10.2.3``
- - ``hclcr.io/wa/aida-orchestrator:10.2.3``
- - ``hclcr.io/wa/aida-predictor:10.2.3``
- - ``hclcr.io/wa/aida-redis:10.2.3``
- - ``hclcr.io/wa/aida-config:10.2.3``
- - ``hclcr.io/wa/aida-ui:10.2.3``
+ - ``hclcr.io/wa/workload-automation/hcl-aida-ad:10.2.3`` 
+ - ``hclcr.io/wa/workload-automation/hcl-aida-exporter:10.2.3``
+ - ``hclcr.io/wa/workload-automation/hcl-aida-email:10.2.3``
+ - ``hclcr.io/wa/workload-automation/hcl-aida-nginx:10.2.3``
+ - ``hclcr.io/wa/workload-automation/hcl-aida-orchestrator:10.2.3``
+ - ``hclcr.io/wa/workload-automation/hcl-aida-predictor:10.2.3``
+ - ``hclcr.io/wa/workload-automation/hcl-aida-redis:10.2.3``
+ - ``hclcr.io/wa/workload-automation/hcl-aida-config:10.2.3``
+ - ``hclcr.io/wa/workload-automation/hcl-aida-ui:10.2.3``
  
 
  
